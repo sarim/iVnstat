@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+
+    <title>iVnstat</title>
+	<link rel="stylesheet" href="css/pure-min.css">
+	<link rel="stylesheet" href="css/side-menu.css">
+</head>
+<body>
+
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu pure-menu-open">
+            <a class="pure-menu-heading" href="#">iVnstat</a>
+
+			<ul>
+				<li class="menu-item-divided"></li>
+	            <li class="title">
+					<span>Interfaces &crarr;</span>
+				</li>
+			</ul>
+			
+			<ul id="ifacelist" class="choices">
+			</ul>
+
+			<ul>
+				<li class="menu-item-divided"></li>
+	            <li class="title">
+					<span>Screens &crarr;</span>
+				</li>
+			</ul>
+			
+            <ul id="views" class="choices">
+                <li class="pure-menu-selected">
+                    <a href="#">Dashboard</a>
+                </li>
+                <li><a href="#">Months</a></li>
+                <li><a href="#">Days</a></li>
+                <li><a href="#">Hours</a></li>
+                <li><a href="#">Tops</a></li>
+            </ul>
+
+            <ul>
+                <li class="menu-item-divided">
+					<a href="https://github.com/sarim/iVnstat">Fork Me At Github</a>
+				</li>
+                <li>
+                    <a href="http://sarim.me"><small>&copy; Sarim Khan</small></a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <h1>iVnstat: A vnstat WEBUI</h1>
+            <h2>Showing interface <span id="cur-iface">ppp0</span></h2>
+        </div>
+        <div class="content">
+			<pre id="dash"></pre>
+			<div id="chartContainer" style="height: 700px; width: 100%;"></div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-2.0.3.min.js"></script>
+<script src="js/canvasjs.min.js"></script>
+<script src="js/ui.js"></script>
+</body>
+</html>
